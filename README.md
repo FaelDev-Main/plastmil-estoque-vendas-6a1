@@ -1,41 +1,37 @@
 # Plastmil - Controle de Estoque e Vendas
 
-Este projeto é um sistema web (Single Page Application) desenvolvido para o controle simplificado de estoque, registro de vendas e gestão de pagamentos da empresa Plastmil.
-
-Abaixo estão as instruções detalhadas para configurar e executar a aplicação no seu ambiente local.
+Este projeto utiliza Node.js, Vite e pnpm. Siga as instruções abaixo para configurar e executar a aplicação localmente.
 
 ## Pré-requisitos
 
-Antes de começar, certifique-se de ter as seguintes ferramentas instaladas no seu sistema operacional:
+Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 - Node.js (versão 18 ou superior recomendada)
-- pnpm (gerenciador de pacotes configurado para este projeto)
+- pnpm (gerenciador de pacotes)
 
-Caso não tenha o pnpm instalado, você pode instalá-lo globalmente no seu computador através do npm executando o seguinte comando no terminal:
+Caso não tenha o pnpm instalado, você pode instalá-lo globalmente executando o seguinte comando no seu terminal:
+
 npm install -g pnpm
 
-## Passo a Passo para Instalação e Execução
+## Configuração e Instalação
 
-### 1. Obter os arquivos do projeto
-Se você recebeu o projeto em um arquivo compactado (como .zip), extraia todo o conteúdo para uma pasta de sua preferência. Se estiver utilizando o Git, clone o repositório para a sua máquina.
+1. Extraia os arquivos do projeto em uma pasta de sua preferência.
+2. Abra o terminal e navegue até o diretório raiz do projeto.
+3. Instale todas as dependências necessárias executando:
 
-### 2. Acessar a pasta do projeto
-Abra o seu terminal ou prompt de comando e navegue até a pasta raiz onde os arquivos foram extraídos. 
-Exemplo:
-cd caminho/para/a/pasta/do/projeto
-
-### 3. Instalar as dependências
-Com o terminal aberto na raiz do projeto, execute o comando abaixo. Ele lerá os arquivos de configuração e baixará todos os pacotes necessários para o sistema funcionar.
 pnpm install
 
-### 4. Configurar as variáveis de ambiente
-Na pasta raiz, você encontrará um arquivo chamado `.env.example`. 
-- Faça uma cópia deste arquivo no mesmo diretório.
-- Renomeie essa nova cópia para `.env` (sem nenhum nome antes do ponto).
-- Abra este arquivo `.env` em um editor de texto e preencha os dados necessários, como configurações locais de banco de dados (Drizzle) caso aplicável.
+## Configuração de Ambiente
 
-### 5. Iniciar o servidor de desenvolvimento
-Após a instalação das dependências e a configuração do ambiente, inicie a aplicação executando o comando:
+O projeto utiliza variáveis de ambiente para configurações, incluindo a conexão com o banco de dados via Drizzle ORM.
+
+1. Na raiz do projeto, localize o arquivo `.env.example`.
+2. Faça uma cópia deste arquivo e renomeie a cópia para `.env`.
+3. Abra o arquivo `.env` em um editor de texto e preencha as variáveis com as informações do seu ambiente local.
+
+## Execução
+
+Após instalar as dependências e configurar o arquivo `.env`, inicie o servidor de desenvolvimento com o comando:
+
 pnpm run dev
 
-### 6. Acessar a aplicação
-Após executar o comando acima, o terminal exibirá um endereço local (normalmente http://localhost:5173 ou http://localhost:3000). Abra o seu navegador de internet, digite esse endereço e você terá acesso ao sistema.
+O terminal exibirá o endereço local onde a aplicação está rodando (geralmente http://localhost:5173 ou http://localhost:3000). Abra este endereço no seu navegador para acessar o sistema.
